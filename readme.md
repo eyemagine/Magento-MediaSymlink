@@ -1,47 +1,13 @@
-magento-integration
+Magento Media Symlink Fix
 ===================
 
-Include Magento blocks and CMS blocks in any PHP application.
+Fixes an issue in Magento CE 1.8.1.0 and EE 1.13.1.0 where using a symlinked media directory breaks CMS upload functionality in the admin.
 
-Example
+Must be enabled in the Admin under System > Config > Advanced > Developer.
+
+See
 -------------
 
-Joomla and Magento
-
-![Joomla and Magento](http://i.imgur.com/MNpADpW.png)
-
-Installation
--------------
-
-* Include <code>magento-integration.php</code> in your application.
-* Initialize the integration and pass the path to Magento bootstrap file.
-
-Example:
-
-    <?php
-    
-    include 'magento-integration.php';
-    MI::init('/path/to/magento/app/Mage.php');
-
-This only needs to be done once.
-
-Usage
--------------
-
-These methods can be used anywhere in the PHP application.
-
-### Layout Blocks
-
-Blocks in Magento's layout can be retrieved by passing the layout name (header, footer, left, etc).
-
-    echo MI::getBlock('header');
-
-### CMS Static Blocks
-
-CMS blocks added via Magento admin can also be retrieved.
-
-    echo MI::getStaticBlock('home-slider');
-
----
-
-Inspired by [Magento WordPress Integration](http://www.mwi-plugin.com/)
+* http://www.magentocommerce.com/bug-tracking/issue?issue=16088
+* http://stackoverflow.com/a/21547351/763468
+* http://magento.stackexchange.com/a/14821/2190
