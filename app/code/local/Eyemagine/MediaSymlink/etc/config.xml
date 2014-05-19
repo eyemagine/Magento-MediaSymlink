@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * EYEMAGINE - The leading Magento Solution Partner
+ *
+ * Media Symlink Fix
+ *
+ * @author    EYEMAGINE <magento@eyemaginetech.com>
+ * @category  Eyemagine
+ * @package   Eyemagine_MediaSymlink
+ * @copyright Copyright (c) 2014 EYEMAGINE Technology, LLC (http://www.eyemaginetech.com)
+ * @license   http://www.eyemaginetech.com/license.txt
+ */
+-->
+<config>
+    <modules>
+        <Eyemagine_MediaSymlink>
+            <version>1.0.0</version>
+        </Eyemagine_MediaSymlink>
+    </modules>
+    <global>
+        <helpers>
+            <mediasymlink>
+                <class>Eyemagine_MediaSymlink_Helper</class>
+            </mediasymlink>
+            <cms>
+                <rewrite>
+                    <wysiwyg_images>Eyemagine_MediaSymlink_Helper_Cms_Wysiwyg_Images</wysiwyg_images>
+                </rewrite>
+            </cms>
+        </helpers>
+    </global>
+</config>
