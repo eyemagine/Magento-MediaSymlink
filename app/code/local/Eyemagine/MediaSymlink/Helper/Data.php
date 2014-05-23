@@ -25,7 +25,7 @@ class Eyemagine_MediaSymlink_Helper_Data extends Mage_Core_Helper_Abstract
      */
     public function active()
     {
-        if (is_null($_isActive)) {
+        if (is_null($this->_isActive)) {
             $this->_isActive = Mage::getStoreConfig(self::XML_PATH_ACTIVE);
         }
         return $this->_isActive;
