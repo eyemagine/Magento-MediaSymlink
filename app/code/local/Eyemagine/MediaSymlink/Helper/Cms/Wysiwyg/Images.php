@@ -28,7 +28,7 @@ class Eyemagine_MediaSymlink_Helper_Cms_Wysiwyg_Images
      */
     protected function _getMediaSymlinkHelper()
     {
-        if (is_null($_mediaSymlinkHelper)) {
+        if (is_null($this->_mediaSymlinkHelper)) {
             $this->_mediaSymlinkHelper = Mage::helper('mediasymlink');
         }
         return $this->_mediaSymlinkHelper;
